@@ -1,6 +1,7 @@
 package com.programmingkida.restfulwebservices.controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.programmingkida.restfulwebservices.beans.HelloWorldBean;
@@ -18,5 +19,12 @@ public class HelloWorldController {
 	public HelloWorldBean helloWorldBean(){
 	  return new HelloWorldBean("Hello World Bean");
 	}
+	
+	
+	
+	@GetMapping(path="/hello-world-path-varible/{name}")
+		public HelloWorldBean helloWorldPathVariable(@PathVariable String name){
+		  return new  HelloWorldBean(String.format("Hello world, %s",name));
+	  }
 	
 }
