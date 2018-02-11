@@ -2,6 +2,7 @@ package com.programmingkida.restfulwebservices.dao;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 
@@ -41,4 +42,15 @@ public class UserDao {
 			return user.isPresent() ? user.get() :null;
 	}
 
+	public User deleteUserById(Integer id){
+		Iterator<User> iterator=users.iterator();
+		while(iterator.hasNext()) {
+			User user=iterator.next();
+			if(user.getId()==id) {
+				iterator.remove();
+				return user;
+			}
+		}
+		return null;
+	}
 }
