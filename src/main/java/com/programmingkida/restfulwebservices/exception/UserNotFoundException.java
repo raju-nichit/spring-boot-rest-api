@@ -1,4 +1,4 @@
-package com.programmingkida.restfulwebservices.controllers;
+package com.programmingkida.restfulwebservices.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

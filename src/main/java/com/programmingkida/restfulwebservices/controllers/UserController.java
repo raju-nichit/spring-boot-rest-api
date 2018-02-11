@@ -14,6 +14,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.programmingkida.restfulwebservices.beans.User;
 import com.programmingkida.restfulwebservices.dao.UserDao;
+import com.programmingkida.restfulwebservices.exception.UserNotFoundException;
 
 @RestController
 public class UserController {
