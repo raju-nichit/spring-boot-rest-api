@@ -10,7 +10,7 @@ public class User {
 
 	@Size(min = 2, message = "Name should have atleast 2 characters")
 	private String name;
-	@Past
+	@Past(message = "Date should in the past")
 	private LocalDateTime birthDate;
 
 	public User() {
